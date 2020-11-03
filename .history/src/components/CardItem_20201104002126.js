@@ -92,7 +92,9 @@ const CardItem = ({city}) => {
         padding: 20px;
      `;
     const ImageIMG = styled.img`
+        background-color: ${PaletColors["grey porcelain"]};
         margin: 10px auto;
+        min-height: 10%;
         width: 100%;
     `;
 

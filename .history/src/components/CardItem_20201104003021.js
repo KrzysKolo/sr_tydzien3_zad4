@@ -117,7 +117,7 @@ const CardItem = ({city}) => {
                     <FontAwesomeIcon icon={faShareAlt} />
                 </CircleDIV>
                 <CircleDIV onClick={() => setShow(!show)}>
-                    <FontAwesomeIcon icon={faAngleDown} className="angle" rotation={show ? 180 : 0} />
+                    <FontAwesomeIcon icon={faAngleDown} className="angle" rotate={show ? 180 : 0} />
                 </CircleDIV>
             </IconsFOOTER>
             <ShowMoreP>

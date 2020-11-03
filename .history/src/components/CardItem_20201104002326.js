@@ -92,7 +92,9 @@ const CardItem = ({city}) => {
         padding: 20px;
      `;
     const ImageIMG = styled.img`
-        margin: 10px auto;
+        background-color: ${PaletColors["jackson purple"]};
+        padding: 10px auto;
+        min-height: 10%;
         width: 100%;
     `;
 

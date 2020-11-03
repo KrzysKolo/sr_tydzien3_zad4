@@ -92,6 +92,7 @@ const CardItem = ({city}) => {
         padding: 20px;
      `;
     const ImageIMG = styled.img`
+        background-color: #7a7a7a;
         margin: 10px auto;
         width: 100%;
     `;

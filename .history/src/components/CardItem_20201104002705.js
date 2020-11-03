@@ -9,7 +9,7 @@ import { faEllipsisV, faHeart, faShareAlt, faAngleDown } from '@fortawesome/free
 const CardItem = ({city}) => {
     const [show, setShow] = useState(false);
     const WrapperDIV = styled.div`
-        background-color: ${PaletColors["swan white"]};
+        background-color: ${PaletColors["grey porcelain"]};
         border: 2px solid ${PaletColors["jackson purple"]};
         border-radius: 10px;
         box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
@@ -92,6 +92,7 @@ const CardItem = ({city}) => {
         padding: 20px;
      `;
     const ImageIMG = styled.img`
+        background-color: ${PaletColors["grey porcelain"]};
         margin: 10px auto;
         width: 100%;
     `;

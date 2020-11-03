@@ -9,11 +9,11 @@ import { faEllipsisV, faHeart, faShareAlt, faAngleDown } from '@fortawesome/free
 const CardItem = ({city}) => {
     const [show, setShow] = useState(false);
     const WrapperDIV = styled.div`
-        background-color: ${PaletColors["swan white"]};
+        background-color: ${PaletColors["crocodile tooth"]};
         border: 2px solid ${PaletColors["jackson purple"]};
         border-radius: 10px;
         box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
-        min-height: 70vh;
+        min-height: 77vh;
         width: 25vw;
         margin-bottom: 5vh;
         overflow: hidden;
@@ -59,24 +59,20 @@ const CardItem = ({city}) => {
         align-items: center;
         font-family: 'Cinzel Decorative', cursive;
         font-size: 1.5rem;
+        margin-bottom: 10px;
         height: 8vh;
         width: 100%;
     `;
     const DescriptionH2 = styled.h2`
         color: ${PaletColors["lucky point"]};
+        background-color: ${PaletColors["swan white"]};
         align-items: center;
         border-top: 1px solid ${PaletColors["grey porcelain"]};
         box-shadow: 0px -2px 4px ${PaletColors["grey porcelain"]};
         font-family: 'Markazi Text', serif;
         font-size: 1.3rem;
+        margin-top: 10px;
         padding: 20px;
-    `;
-    const ShowMoreP = styled.p`
-        color: ${PaletColors["lucky point"]};
-        background-color: ${PaletColors["swan white"]};
-        font-family: 'Markazi Text', serif;
-        font-size: 1.3rem;
-        padding: 0 20px 20px 20px;
     `;
     const IconsFOOTER = styled.footer`
         color: ${PaletColors["lucky point"]};
@@ -89,10 +85,9 @@ const CardItem = ({city}) => {
         align-content: center;
         font-family: 'Markazi Text', serif;
         font-size: 1.3rem;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
      `;
     const ImageIMG = styled.img`
-        margin: 10px auto;
         width: 100%;
     `;
 
@@ -117,12 +112,10 @@ const CardItem = ({city}) => {
                     <FontAwesomeIcon icon={faShareAlt} />
                 </CircleDIV>
                 <CircleDIV onClick={() => setShow(!show)}>
-                    <FontAwesomeIcon icon={faAngleDown} className="angle" rotation={show ? 180 : 0} />
+                    <FontAwesomeIcon icon={faAngleDown}  rotation={show ? 180 : 0} />
                 </CircleDIV>
             </IconsFOOTER>
-            <ShowMoreP>
-                {show && city.showMore}
-            </ShowMoreP>
+            {show && city.showMore}
         </WrapperDIV>
      );
 }

@@ -9,7 +9,6 @@ import { faEllipsisV, faHeart, faShareAlt, faAngleDown } from '@fortawesome/free
 const CardItem = ({city}) => {
     const [show, setShow] = useState(false);
     const WrapperDIV = styled.div`
-        background-color: ${PaletColors["swan white"]};
         border: 2px solid ${PaletColors["jackson purple"]};
         border-radius: 10px;
         box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
@@ -59,16 +58,19 @@ const CardItem = ({city}) => {
         align-items: center;
         font-family: 'Cinzel Decorative', cursive;
         font-size: 1.5rem;
+        margin-bottom: 10px;
         height: 8vh;
         width: 100%;
     `;
     const DescriptionH2 = styled.h2`
         color: ${PaletColors["lucky point"]};
+        background-color: ${PaletColors["swan white"]};
         align-items: center;
         border-top: 1px solid ${PaletColors["grey porcelain"]};
         box-shadow: 0px -2px 4px ${PaletColors["grey porcelain"]};
         font-family: 'Markazi Text', serif;
         font-size: 1.3rem;
+        margin-top: 10px;
         padding: 20px;
     `;
     const ShowMoreP = styled.p`
@@ -92,7 +94,7 @@ const CardItem = ({city}) => {
         padding: 20px;
      `;
     const ImageIMG = styled.img`
-        margin: 10px auto;
+        background-color: ${PaletColors["crocodile tooth"]};
         width: 100%;
     `;
 

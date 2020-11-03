@@ -59,6 +59,7 @@ const CardItem = ({city}) => {
         align-items: center;
         font-family: 'Cinzel Decorative', cursive;
         font-size: 1.5rem;
+        margin-bottom: 10px;
         height: 8vh;
         width: 100%;
     `;
@@ -69,6 +70,7 @@ const CardItem = ({city}) => {
         box-shadow: 0px -2px 4px ${PaletColors["grey porcelain"]};
         font-family: 'Markazi Text', serif;
         font-size: 1.3rem;
+        margin-top: 10px;
         padding: 20px;
     `;
     const ShowMoreP = styled.p`
@@ -92,8 +94,9 @@ const CardItem = ({city}) => {
         padding: 20px;
      `;
     const ImageIMG = styled.img`
-        margin: 10px auto;
+        background-color: ${PaletColors["crocodile tooth"]};
         width: 100%;
+        height: 100%;
     `;
 
     return (

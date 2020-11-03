@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { Componets } from 'react';
 import styled from 'styled-components';
-import './../App.css';
 import PaletColors from './../colors/PaletColors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisV, faHeart, faShareAlt, faAngleDown } from '@fortawesome/free-solid-svg-icons';
-
+import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const CardItem = ({city}) => {
-    const [show, setShow] = useState(false);
+    const MAX_STRING_LENGTH = 150;
     const WrapperDIV = styled.div`
-        background-color: ${PaletColors["swan white"]};
+        background-color: ${PaletColors["crocodile tooth"]};
         border: 2px solid ${PaletColors["jackson purple"]};
         border-radius: 10px;
         box-shadow: 3px 3px 5px ${PaletColors["grey porcelain"]};
-        min-height: 70vh;
+        height: 80vh;
         width: 25vw;
         margin-bottom: 5vh;
         overflow: hidden;
@@ -34,7 +35,7 @@ const CardItem = ({city}) => {
             box-shadow: 0px 0px 3px ${PaletColors["grey porcelain"]};
         }
     `;
-    const LetterDIV = styled.div`
+    const DivLetter = styled.div`
         background-color: ${PaletColors["fluorescent red"]};
         border-radius: 50%;
         color: ${PaletColors["swan white"]};
@@ -59,26 +60,23 @@ const CardItem = ({city}) => {
         align-items: center;
         font-family: 'Cinzel Decorative', cursive;
         font-size: 1.5rem;
+        margin-bottom: 10px;
         height: 8vh;
         width: 100%;
     `;
     const DescriptionH2 = styled.h2`
         color: ${PaletColors["lucky point"]};
+        background-color: ${PaletColors["swan white"]};
         align-items: center;
         border-top: 1px solid ${PaletColors["grey porcelain"]};
         box-shadow: 0px -2px 4px ${PaletColors["grey porcelain"]};
         font-family: 'Markazi Text', serif;
         font-size: 1.3rem;
+        margin-top: 10px;
         padding: 20px;
+
     `;
-    const ShowMoreP = styled.p`
-        color: ${PaletColors["lucky point"]};
-        background-color: ${PaletColors["swan white"]};
-        font-family: 'Markazi Text', serif;
-        font-size: 1.3rem;
-        padding: 0 20px 20px 20px;
-    `;
-    const IconsFOOTER = styled.footer`
+    const FOOTER = styled.footer`
         color: ${PaletColors["lucky point"]};
         background-color: ${PaletColors["swan white"]};
         align-items: center;
@@ -89,40 +87,44 @@ const CardItem = ({city}) => {
         align-content: center;
         font-family: 'Markazi Text', serif;
         font-size: 1.3rem;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
      `;
     const ImageIMG = styled.img`
-        margin: 10px auto;
         width: 100%;
     `;
-
+    const styles ={
+        width: "5px",
+        height: "5px",
+        backgroundColor: PaletColors["hot stone"],
+        borderRadius: "50%",
+        textAlign: "center",
+        margin: "3px auto",
+    }
     return (
         <WrapperDIV>
             <HeaderH1>
-                <LetterDIV>
+                <DivLetter>
                     K
-                </LetterDIV>
+                </DivLetter>
                 {city.name}
-                <CircleDIV>
+                <DivCircle>
                     <FontAwesomeIcon icon={faEllipsisV}/>
-                </CircleDIV>
+                </DivCircle>
             </HeaderH1>
-            <ImageIMG src={city.image} ale={city.name}/>
-            <DescriptionH2>{city.description}</DescriptionH2>
-            <IconsFOOTER>
-                <CircleDIV>
+            <ImageIMG src={city.imag} ale={city.name}/>
+            <DescriptionH2>{`${city.description.substr(0, MAX_STRING_LENGTH)} ...`}</DescriptionH2>
+            <FOOTER>
+                <DivCircle>
                     <FontAwesomeIcon icon={faHeart} />
-                </CircleDIV>
-                <CircleDIV style={{marginLeft: "-50%"}}>
+                </DivCircle>
+                <DivCircle style={{marginLeft: "-50%"}}>
                     <FontAwesomeIcon icon={faShareAlt} />
-                </CircleDIV>
-                <CircleDIV onClick={() => setShow(!show)}>
-                    <FontAwesomeIcon icon={faAngleDown} className="angle" rotation={show ? 180 : 0} />
-                </CircleDIV>
-            </IconsFOOTER>
-            <ShowMoreP>
-                {show && city.showMore}
-            </ShowMoreP>
+                </DivCircle>
+                <DivCircle>
+                    <FontAwesomeIcon icon={faAngleDown} />
+                </DivCircle>
+
+            </FOOTER>
         </WrapperDIV>
      );
 }

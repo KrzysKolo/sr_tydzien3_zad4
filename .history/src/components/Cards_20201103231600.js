@@ -1,7 +1,7 @@
 import React from 'react';
 import Carditem from './CardItem';
 import styled from 'styled-components';
-import data from "./../data";
+import data from "./Data";
 const Cards = () => {
   const Div=styled.div`
     display: grid;

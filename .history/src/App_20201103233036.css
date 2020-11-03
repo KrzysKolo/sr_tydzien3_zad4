@@ -3,9 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-.angle {
-  transition: ease-in-out 0.3s;
-}
 .angle:hover {
   transform: rotate(180deg);
 }
